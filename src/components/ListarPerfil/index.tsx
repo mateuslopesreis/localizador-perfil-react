@@ -1,4 +1,4 @@
-import { List } from "@mui/material"
+import { Card, List, Paper } from "@mui/material"
 
 type ListagemPerfilProps ={
     children:React.ReactNode
@@ -8,13 +8,16 @@ export function ListarPerfil({children}:ListagemPerfilProps){
 
     return(
 
-        <section className='listandoPerfil'>
+        <Paper variant="outlined" >
+    
         <List sx={{
+            bgcolor: '#9b34eb',
+            width: '100%'
         }}>
                     {children}
-            
+                    
  
         </List>
-        </section>
+        </Paper>
     )
 }

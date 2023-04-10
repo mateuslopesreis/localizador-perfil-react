@@ -1,19 +1,27 @@
-import { Card, TextField } from "@mui/material";
+import { Avatar, Card, Divider, ListItem, ListItemAvatar, ListItemText, TextField, Typography } from "@mui/material";
+import { UsuarioPerfil } from "../../type";
 
 type ContactPerfilProps ={
-    
+    contactData: UsuarioPerfil
 }
 
-export function Perfil(){
+export function Perfil({contactData}:ContactPerfilProps){
+    const{name, avatar_url} = contactData
+    return(
+        <>
+        <ListItem>
+            <ListItemAvatar>
+                <Avatar src={avatar_url}/>
+            </ListItemAvatar>
 
-    <Card variant="outlined">
-    <form id="consultaPerfil">
+            <ListItemText primary={<Typography>{name}</Typography>}>
+            </ListItemText>
 
+          
+        </ListItem>
 
-        <TextField variant='outlined' label="Digite o perfil" fullWidth />
-
-        <button id="btnConsultarPerfil">Buscar</button>
-</form>
-    </Card>
-
+        <Divider></Divider>
+        </>
+    )
+   
 }

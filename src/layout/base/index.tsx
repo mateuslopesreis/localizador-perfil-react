@@ -21,7 +21,7 @@ export function Base({children,appBarTitle}:BaseLayoutProps){
         flexDirection='column'
         alignItems='center'
 
-        padding={1}
+        padding={5}
         mt={6}
         sx={{
           bgcolor: "white",
