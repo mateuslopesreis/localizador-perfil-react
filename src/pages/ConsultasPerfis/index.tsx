@@ -1,17 +1,17 @@
-import { Perfil } from "../../../components/Perfil";
+import { Perfil } from "../../components/Perfil";
 import axios from "axios";
 import { useState } from "react";
-import { UsuarioPerfil } from "../../../type";
+import { UsuarioPerfil } from "../../type";
 import { Avatar, Box, Button, Card, CardContent, ListItem, ListItemAvatar, ListItemText, TextField, Typography } from "@mui/material";
-import { ListarPerfil } from "../../../components/ListarPerfil";
+import { ListarPerfil } from "../../components/ListarPerfil";
 
 export function ConsultasPerfis(){
 
 
     
     const [userName, setUserName] = useState("");
-    const [name, setName] = useState("Aguardando...");
-    const [avatarURL, setAvatarURL] = useState("Aguardando...");
+    const [name, setName] = useState("");
+    const [avatarURL, setAvatarURL] = useState("");
 
   const handleSearch = () => {
     axios
@@ -43,9 +43,7 @@ export function ConsultasPerfis(){
           <ListarPerfil>
         
           <ListItem>
-            <ListItemAvatar>
-              <Avatar src={avatarURL}/>
-            </ListItemAvatar>
+            <img src={avatarURL}/>
           
             <ListItemText primary={<Typography>{name}</Typography>}>
             </ListItemText>

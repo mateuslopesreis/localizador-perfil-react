@@ -1,10 +1,10 @@
 import { Box, Button, Card, CardContent, TextField } from "@mui/material";
-import { ListarPerfil } from "../../components/ListarPerfil";
-import { Base } from "../../layout/base";
+import { ListarPerfil } from "../../../components/ListarPerfil";
+import { Base } from "..";
 import { FormEvent, useEffect, useState } from "react";
-import { UsuarioPerfil } from "../../type";
-import { Perfil } from "../../components/Perfil";
-import { getPerfil } from "../../services/api";
+import { UsuarioPerfil } from "../../../type";
+import { Perfil } from "../../../components/Perfil";
+import { getPerfil } from "../../../services/api";
 
 
 export function ConsultaPerfil(){
