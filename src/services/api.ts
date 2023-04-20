@@ -6,7 +6,7 @@ const api = axios.create({
 })
 
 export async function getUser(userName:String) {
-    const user = await api.get('userName')
+    const user = await api.get(userName)
     return user.data
 }
 
