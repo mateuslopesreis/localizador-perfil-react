@@ -1,25 +1,29 @@
 import { FormEvent, useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import { Base } from './layout/base'
-import { Avatar, Button, Card, CardContent, CircularProgress, CssBaseline, Grid, Typography } from '@mui/material'
+import { Avatar, Button, Card, CardContent, CircularProgress, Grid, Typography } from '@mui/material'
 import { Box, CssBaseline, TextField } from '@mui/material'
 import { Theme } from './theme/ThemeProvider'
 import { ConsultaPerfil } from './layout/base/ConsultaPerfil'
 import { ConsultasPerfis } from './pages/ConsultasPerfis'
-import { QueryClientProvider, useQuery } from "@tanstack/react-query"
-
 import { getUser } from './services/api'
 
 type User ={
-  avatar_url: String,
-  html_url: String,
-  name:String
+  avatar_url: string,
+  html_url: string,
+  name:string,
+  followers:string,
+  following:string,
+  bio:string
   }
 
   const initialUser:User={
     avatar_url:"",
     html_url:"",
-    name:""
+    name:"",
+    followers:"",
+    following:"",
+    bio:""
   }
 
 
@@ -36,11 +40,6 @@ function App() {
   setUser(await getUser(inputUserName.value))
   setLoading(false)
  }
-
-
-
-  
-
 
   return (
     <>
@@ -68,7 +67,11 @@ function App() {
               <Typography variant='h4'>
                 {user.name}
               </Typography>
+              {user.bio}
+              
             </CardContent>
+            {user.followers}
+            {user.following}
           </Card>
 
       )}
