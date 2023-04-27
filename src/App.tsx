@@ -8,7 +8,7 @@ import { ConsultaPerfil } from './layout/base/ConsultaPerfil'
 import { ConsultasPerfis } from './pages/ConsultasPerfis'
 import { getUser } from './services/api'
 
-type User ={
+/* type User ={
   avatar_url: string,
   html_url: string,
   name:string,
@@ -39,11 +39,17 @@ function App() {
   setLoading(true)
   setUser(await getUser(inputUserName.value))
   setLoading(false)
- }
+ } */
+
+ function App() {
 
   return (
     <>
 
+<Base appBarTitle="Buscador de Perfis">
+<ConsultasPerfis/>
+  </Base>
+{/* 
     <Theme>
 
       <CssBaseline/>
@@ -79,7 +85,7 @@ function App() {
       
        </Base>
 
-    </Theme>
+    </Theme> */}
 
     </>
 

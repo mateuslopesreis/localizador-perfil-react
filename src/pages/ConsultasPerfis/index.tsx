@@ -12,6 +12,9 @@ export function ConsultasPerfis(){
     const [userName, setUserName] = useState("");
     const [name, setName] = useState("");
     const [avatarURL, setAvatarURL] = useState("");
+    const [followers, setFollowers] = useState("");
+    const [following, setFollowing] = useState("");
+    const [bio, setBio] = useState("");
 
   const handleSearch = () => {
     axios
@@ -19,6 +22,10 @@ export function ConsultasPerfis(){
       .then((res) => {
         setName(res.data.name);
         setAvatarURL(res.data.avatar_url);
+        setFollowers(res.data.followers);
+        setFollowing(res.data.following);
+        setBio(res.data.bio)
+
 
 
       })
@@ -48,7 +55,15 @@ export function ConsultasPerfis(){
             <ListItemText primary={<Typography>{name}</Typography>}>
             </ListItemText>
 
-             
+            <ListItemText primary={<Typography>{followers}</Typography>}>
+            </ListItemText>
+
+            <ListItemText primary={<Typography>{following}</Typography>}>
+            </ListItemText>
+
+            <ListItemText primary={<Typography>{following}</Typography>}>
+            </ListItemText>
+
             </ListItem>
            
             </ListarPerfil>
