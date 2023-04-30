@@ -50,21 +50,27 @@ export function ConsultasPerfis(){
           <ListarPerfil>
         
           <ListItem>
-            <img src={avatarURL}/>
+          <ListItemAvatar>
+              <Avatar src={avatarURL}/>
+            </ListItemAvatar>
+           
           
             <ListItemText primary={<Typography>{name}</Typography>}>
             </ListItemText>
 
-            <ListItemText primary={<Typography>{followers}</Typography>}>
-            </ListItemText>
-
-            <ListItemText primary={<Typography>{following}</Typography>}>
-            </ListItemText>
-
-            <ListItemText primary={<Typography>{following}</Typography>}>
-            </ListItemText>
-
+          
             </ListItem>
+
+            <ListItemText primary={<Typography>{" Seguindo: "+following}</Typography>}>
+            </ListItemText>
+           
+
+            <ListItemText primary={<Typography>{" Seguidores: "+followers}</Typography>}>
+            </ListItemText>
+           
+
+            <ListItemText primary={<Typography>{"Bio: "+bio}</Typography>}>
+            </ListItemText>
            
             </ListarPerfil>
             

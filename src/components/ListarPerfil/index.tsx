@@ -11,8 +11,14 @@ export function ListarPerfil({children}:ListagemPerfilProps){
         <Paper variant="outlined" >
     
         <List sx={{
-            bgcolor: '#9b34eb',
-            width: '100%'
+            bgcolor: '#2e3136',
+            width: '100%',
+            height: '80%',
+            padding: '8px',
+            borderRadius: '8px',
+            color: 'white'
+
+            
         }}>
                     {children}
                     
